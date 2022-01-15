@@ -1,0 +1,42 @@
+> ensemble1.RMSE (Training error)
+A glm ensemble of 11 base models: glm, rf, xgbDART, xgbLinear, monmlp, gcvEarth, ppr, svmRadial, knn, gaussprLinear, rpart
+
+Ensemble results:
+Generalized Linear Model 
+
+306 samples
+ 11 predictor
+
+No pre-processing
+Resampling: Cross-Validated (10 fold) 
+Summary of sample sizes: 276, 274, 277, 275, 276, 275, ... 
+Resampling results:
+
+  RMSE        Rsquared   MAE         
+  2.2077e-05  0.9899457  1.440521e-05
+  
+  > summary(ensemble1.RMSE)
+The following models were ensembled: glm, rf, xgbDART, xgbLinear, monmlp, gcvEarth, ppr, svmRadial, knn, gaussprLinear, rpart 
+They were weighted: 
+0 -0.1023 0.3892 -0.0631 -0.0799 0.3601 -0.175 0.0861 0.0504 0.4327 0.1664 -0.0726
+The resulting RMSE is: 0
+The fit for each individual model on the RMSE is: 
+        method         RMSE       RMSESD
+           glm 1.044094e-04 1.153280e-05
+            rf 2.856890e-05 1.398189e-05
+       xgbDART 9.588316e-05 2.304851e-05
+     xgbLinear 9.981277e-05 2.210123e-05
+        monmlp 3.349371e-05 5.179295e-06
+      gcvEarth 5.438954e-05 1.057124e-05
+           ppr 4.143227e-05 1.063562e-05
+     svmRadial 8.067920e-05 2.864260e-05
+           knn 2.994519e-05 8.253245e-06
+ gaussprLinear 1.092370e-04 9.754481e-06
+         rpart 1.118227e-04 1.473838e-05
+         
+         
+> varImp(ensemble1.RMSE)
+       overall         glm       rf  xgbDART xgbLinear   monmlp gcvEarth      ppr svmRadial      knn gaussprLinear    rpart
+mV    1.822787  0.00000000  0.00000  0.00000   0.00000  0.00000  0.00000  0.00000   0.00000  0.00000       0.00000 49.66635
+Vdc  33.014002  0.03730859 34.12697 26.69942  42.39316 33.01956 40.59585 33.01956  33.01956 33.01956      33.01956 50.33365
+Freq 65.163212 99.96269141 65.87303 73.30058  57.60684 66.98044 59.40415 66.98044  66.98044 66.98044      66.98044  0.00000

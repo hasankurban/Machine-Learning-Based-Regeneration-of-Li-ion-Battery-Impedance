@@ -1,0 +1,35 @@
+> ensemble1.RMSE
+A glm ensemble of 3 base models: xgbLinear, xgbDART, xgbTree
+
+Ensemble results:
+Generalized Linear Model 
+
+306 samples
+  3 predictor
+
+No pre-processing
+Resampling: Cross-Validated (10 fold) 
+Summary of sample sizes: 274, 275, 278, 275, 275, 275, ... 
+Resampling results:
+
+  RMSE       Rsquared   MAE      
+  0.4770927  0.9824373  0.2762388
+  
+  
+  > summary(ensemble1.RMSE)
+The following models were ensembled: xgbLinear, xgbDART, xgbTree 
+They were weighted: 
+0.2184 0.2674 0.3739 0.3883
+The resulting RMSE is: 0.4771
+The fit for each individual model on the RMSE is: 
+    method      RMSE    RMSESD
+ xgbLinear 0.6252711 0.4062104
+   xgbDART 0.5301067 0.2101397
+   xgbTree 0.5462306 0.1674854
+   
+   
+   > varImp(ensemble1.RMSE)
+      overall xgbLinear  xgbDART  xgbTree
+mV    0.00000    0.0000  0.00000  0.00000
+Vdc  24.36454   25.7925 26.10402 21.70608
+Freq 75.63546   74.2075 73.89598 78.29392
