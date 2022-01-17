@@ -21,4 +21,5 @@ dim(finalData)
 originalData <-finalData
 #picking the variables that will be used in training.
 finalData <- finalData[,c(1,7,8,5,6)]
-names(finalData) <- c("f",  expression("\u394V"),  "V",  expression("\u03A6"),   expression("\u394I"))
+  names(finalData) <- c("f", paste( "V","dc",sep="_"), "V", paste( "Z","phz",sep="_"),  paste( "I","dc",sep="_"))
+#names(finalData) <- c("f",  expression("\u394V"),  "V",  expression("\u03A6"),   expression("\u394I"))
